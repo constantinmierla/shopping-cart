@@ -1,18 +1,18 @@
-package com.dailycodework.dreamshops.request;
+package com.dailycodework.dreamshops.dto;
 
 import com.dailycodework.dreamshops.model.Category;
+import com.dailycodework.dreamshops.model.Image;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.math.BigDecimal;
-@Getter
-@Setter
+import java.util.List;
+
 @Data
-public class AddProductRequest {
+public class ProductDto {
     private Long id;
     private String name;
     private String brand;
@@ -20,4 +20,5 @@ public class AddProductRequest {
     private int inventory;
     private String description;
     private Category category;
+    private List<ImageDto> images;
 }

@@ -1,5 +1,6 @@
 package com.dailycodework.dreamshops.repository;
 
+import com.dailycodework.dreamshops.model.Category;
 import com.dailycodework.dreamshops.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -9,8 +10,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findByCategoryName(String category);
 
     List<Product> findByBrand(String brand);
-
-    List<Product> findByCategoryAndBrand(String category, String brand);
 
     List<Product> findByName(String name);
 
